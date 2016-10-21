@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="20dp"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_menu_search_holo_light"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:id="@+id/mng_task_search"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="20dp"
+        android:orientation="horizontal"
+        android:id="@+id/mng_open">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="viewEnd"
+            android:text="Filters ..."/>
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:src="@drawable/ic_btn_search_down"
+            android:id="@+id/mng_collapse_icon"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/mng_filter">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorPrimary"/>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="4"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:text="01/01/2001"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:id="@+id/mng_start_date"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                android:text="to"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="4"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:text="01/01/2001"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:id="@+id/mng_end_date"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="70dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:layout_weight="2"
+                android:id="@+id/mng_toggle_status">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:layout_gravity="center_vertical|right"
+                    android:gravity="right"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="Completed"
+                    android:id="@+id/mng_toggle_text"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/btn_circle_normal"
+                    android:id="@+id/mng_toggle_icon"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:layout_weight="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:text="All tags"
+                    android:id="@+id/mng_all_tags"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:textAlignment="center"
+                    android:layout_gravity="center_vertical"
+                    android:text="One of the tags"
+                    android:id="@+id/mng_one_task"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:paddingTop="0dp"
+            android:paddingBottom="10dp"
+            android:src="@drawable/ic_cab_done_holo_green"
+            android:id="@+id/mng_trigger"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorPrimary"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:descendantFocusability="afterDescendants"
+            android:id="@+id/rv_mng_reminder" />
+    </LinearLayout>
+</LinearLayout>
